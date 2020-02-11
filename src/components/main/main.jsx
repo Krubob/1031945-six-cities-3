@@ -94,7 +94,7 @@ const Main = ({placesCount, placesNames}) => {
 
               </form>
               <div className="cities__places-list places__list tabs__content">
-                {placesNames.map((album, index) => (
+                {placesNames.map((placeName, index) => (
                   <article className="cities__place-card place-card" key={index}>
                     <div className="place-card__mark">
                       <span>Premium</span>
@@ -124,7 +124,7 @@ const Main = ({placesCount, placesNames}) => {
                         </div>
                       </div>
                       <h2 className="place-card__name">
-                        <a href="#">{placesNames[index]}</a>
+                        <a href="#">{placeName}</a>
                       </h2>
                       <p className="place-card__type">Apartment</p>
                     </div>
@@ -145,7 +145,7 @@ const Main = ({placesCount, placesNames}) => {
 
 Main.propTypes = {
   placesCount: PropTypes.number.isRequired,
-  placesNames: PropTypes.string.isRequired
+  placesNames: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 export default Main;
