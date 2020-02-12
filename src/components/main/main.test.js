@@ -12,6 +12,7 @@ it(`Should Main render correctly`, () => {
     .create(<Main
       placesCount={Settings.PLACES_COUNT}
       placesNames={placesNames}
+      onTitleButtonClick={() => {}}
     />)
     .toJSON();
 

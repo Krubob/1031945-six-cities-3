@@ -12,6 +12,7 @@ it(`Render App`, () => {
     .create(<App
       placesCount={Settings.PLACES_COUNT}
       placesNames={placesNames}
+      onTitleButtonClick={() => {}}
     />)
     .toJSON();
 
