@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Main = ({placesCount, placesNames}) => {
+const Main = ({placesCount, placesNames, onTitleButtonClick}) => {
 
   return (
     <div className="page page--gray page--main">
@@ -9,7 +9,7 @@ const Main = ({placesCount, placesNames}) => {
         <div className="container">
           <div className="header__wrapper">
             <div className="header__left">
-              <a className="header__logo-link header__logo-link--active">
+              <a onClick={onTitleButtonClick} className="header__logo-link header__logo-link--active">
                 <img className="header__logo" src="img/logo.svg" alt="6 cities logo" width="81" height="41"/>
               </a>
             </div>
@@ -145,7 +145,8 @@ const Main = ({placesCount, placesNames}) => {
 
 Main.propTypes = {
   placesCount: PropTypes.number.isRequired,
-  placesNames: PropTypes.arrayOf(PropTypes.string).isRequired
+  placesNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onTitleButtonClick: PropTypes.func.isRequired
 };
 
 export default Main;
