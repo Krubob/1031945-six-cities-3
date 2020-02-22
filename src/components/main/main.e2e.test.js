@@ -1,24 +1,20 @@
 import React from "react";
 import Enzyme, {shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import Main from "./main";
+import Main from "./main.jsx";
+import offers from "../../mocks/offers.js";
 
 Enzyme.configure({
   adapter: new Adapter(),
 });
 
-const Settings = {
-  PLACES_COUNT: 312
-};
-const placesNames = [`Beautiful & luxurious apartment at great location`, `Wood and stone place`];
 
-it(`Should title button be pressed`, () => {
+it(`on title click`, () => {
   const onTitleButtonClick = jest.fn();
 
   const main = shallow(
       <Main
-        placesCount={Settings.PLACES_COUNT}
-        placesNames={placesNames}
+        offers={offers}
         onTitleButtonClick={onTitleButtonClick}
       />
   );

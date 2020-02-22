@@ -1,21 +1,27 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, {PureComponent} from "react";
 import Main from "../main/main.jsx";
+import PropTypes from "prop-types";
+import OfferCard from "../offer-card/offer-card.jsx";
 
-const App = ({placesCount, placesNames, onTitleButtonClick}) => {
+const onTitleButtonClick = () => {};
 
-  return (
-    <Main placesCount={placesCount}
-      placesNames={placesNames}
-      onTitleButtonClick={onTitleButtonClick}
-    />
-  );
-};
+class App extends PureComponent {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const {offers} = this.props;
+
+    return (
+      <Main offers={offers} onTitleButtonClick={onTitleButtonClick}/>
+    );
+  }
+}
 
 App.propTypes = {
-  placesCount: PropTypes.number.isRequired,
-  placesNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-  onTitleButtonClick: PropTypes.func.isRequired
+  onTitleButtonClick: PropTypes.func,
+  offers: PropTypes.arrayOf(OfferCard.propTypes.offer)
 };
 
 export default App;

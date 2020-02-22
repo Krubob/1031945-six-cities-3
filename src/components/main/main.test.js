@@ -1,20 +1,13 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import Main from "./main.jsx";
+import offers from "../../mocks/offers.js";
 
-const Settings = {
-  PLACES_COUNT: 312
-};
-const placesNames = [`Beautiful & luxurious apartment at great location`, `Wood and stone place`];
-
-it(`Should Main render correctly`, () => {
+it(`Render Main`, () => {
   const tree = renderer
     .create(<Main
-      placesCount={Settings.PLACES_COUNT}
-      placesNames={placesNames}
-      onTitleButtonClick={() => {}}
+      offers={offers}
     />)
     .toJSON();
-
   expect(tree).toMatchSnapshot();
 });

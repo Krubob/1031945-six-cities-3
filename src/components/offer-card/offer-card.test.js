@@ -1,13 +1,12 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import App from "./app.jsx";
+import OfferCard from "./offer-card.jsx";
 import offers from "../../mocks/offers.js";
 
-
-it(`Render App`, () => {
+it(`Render OfferCard component`, () => {
   const tree = renderer
-    .create(<App
-      offers={offers}
+    .create(<OfferCard
+      offer={offers[0]}
     />)
     .toJSON();
   expect(tree).toMatchSnapshot();
