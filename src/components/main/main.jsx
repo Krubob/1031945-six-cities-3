@@ -1,6 +1,7 @@
 import React, {PureComponent} from "react";
 import OfferList from "../offers-list/offers-list.jsx";
 import PropTypes from "prop-types";
+import OfferCard from "../offer-card/offer-card.jsx";
 
 class Main extends PureComponent {
   constructor(props) {
@@ -114,13 +115,8 @@ class Main extends PureComponent {
 }
 
 Main.propTypes = {
-  offers: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired,
-  })).isRequired,
-  onTitleButtonClick: PropTypes.func.isRequired
+  offers: PropTypes.arrayOf(OfferCard.propTypes.offer),
+  onTitleButtonClick: PropTypes.func
 };
 
 export default Main;

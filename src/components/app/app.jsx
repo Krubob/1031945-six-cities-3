@@ -1,6 +1,7 @@
 import React, {PureComponent} from "react";
 import Main from "../main/main.jsx";
 import PropTypes from "prop-types";
+import OfferCard from "../offer-card/offer-card.jsx";
 
 const onTitleButtonClick = () => {};
 
@@ -19,13 +20,8 @@ class App extends PureComponent {
 }
 
 App.propTypes = {
-  onTitleButtonClick: PropTypes.func.isRequired,
-  offers: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired,
-  })).isRequired,
+  onTitleButtonClick: PropTypes.func,
+  offers: PropTypes.arrayOf(OfferCard.propTypes.offer)
 };
 
 export default App;

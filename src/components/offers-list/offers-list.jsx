@@ -23,7 +23,7 @@ class OffersList extends PureComponent {
     return (
       <div className="cities__places-list places__list tabs__content">
         {offers.map((it) => (
-          <OfferCard key={it.name} offers={it} handleOfferHover={this.handleOfferHover}/>
+          <OfferCard key={it.name} offer={it} onOfferHover={this.handleOfferHover}/>
         ))}
       </div>
     );
@@ -31,13 +31,8 @@ class OffersList extends PureComponent {
 }
 
 OffersList.propTypes = {
-  handleOfferHover: PropTypes.func.isRequired,
-  offers: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired,
-  })).isRequired,
+  handleOfferHover: PropTypes.func,
+  offers: PropTypes.arrayOf(OfferCard.propTypes.offer)
 };
 
 export default OffersList;
