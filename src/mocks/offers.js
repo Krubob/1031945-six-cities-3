@@ -3,22 +3,28 @@ export default [
     id: `4353434`,
     photos: [
       {
-        src: `img/room.jpg`
+        src: `img/room.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/apartment-01.jpg`
+        src: `img/apartment-01.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/apartment-02.jpg`
+        src: `img/apartment-02.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/apartment-03.jpg`
+        src: `img/apartment-03.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/studio-01.jpg`
+        src: `img/studio-01.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/apartment-01.jpg`
+        src: `img/apartment-01.jpg`,
+        alt: `Photo studio`
       }
     ],
     name: `Beautiful & luxurious apartment at great location`,
@@ -42,22 +48,28 @@ export default [
     id: `3345674`,
     photos: [
       {
-        src: `img/room.jpg`
+        src: `img/room.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/apartment-01.jpg`
+        src: `img/apartment-01.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/apartment-02.jpg`
+        src: `img/apartment-02.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/apartment-03.jpg`
+        src: `img/apartment-03.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/studio-01.jpg`
+        src: `img/studio-01.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/apartment-01.jpg`
+        src: `img/apartment-01.jpg`,
+        alt: `Photo studio`
       }
     ],
     name: `Wood and stone place`,
@@ -81,22 +93,28 @@ export default [
     id: `1225459`,
     photos: [
       {
-        src: `img/room.jpg`
+        src: `img/room.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/apartment-01.jpg`
+        src: `img/apartment-01.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/apartment-02.jpg`
+        src: `img/apartment-02.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/apartment-03.jpg`
+        src: `img/apartment-03.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/studio-01.jpg`
+        src: `img/studio-01.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/apartment-01.jpg`
+        src: `img/apartment-01.jpg`,
+        alt: `Photo studio`
       }
     ],
     name: `Canal View Prinsengracht`,
@@ -120,22 +138,28 @@ export default [
     id: `4298509`,
     photos: [
       {
-        src: `img/room.jpg`
+        src: `img/room.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/apartment-01.jpg`
+        src: `img/apartment-01.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/apartment-02.jpg`
+        src: `img/apartment-02.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/apartment-03.jpg`
+        src: `img/apartment-03.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/studio-01.jpg`
+        src: `img/studio-01.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/apartment-01.jpg`
+        src: `img/apartment-01.jpg`,
+        alt: `Photo studio`
       }
     ],
     name: `Nice, cozy, warm big bed apartment`,
@@ -159,22 +183,28 @@ export default [
     id: `7275453`,
     photos: [
       {
-        src: `img/room.jpg`
+        src: `img/room.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/apartment-01.jpg`
+        src: `img/apartment-01.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/apartment-02.jpg`
+        src: `img/apartment-02.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/apartment-03.jpg`
+        src: `img/apartment-03.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/studio-01.jpg`
+        src: `img/studio-01.jpg`,
+        alt: `Photo studio`
       },
       {
-        src: `img/apartment-01.jpg`
+        src: `img/apartment-01.jpg`,
+        alt: `Photo studio`
       }
     ],
     name: `Silient place`,

@@ -61,7 +61,8 @@ OfferCard.propTypes = {
     id: PropTypes.string.isRequired,
     photos: PropTypes.arrayOf(
         PropTypes.shape({
-          src: PropTypes.string.isRequired
+          src: PropTypes.string.isRequired,
+          alt: PropTypes.string.isRequired
         }).isRequired
     ),
     name: PropTypes.string.isRequired,

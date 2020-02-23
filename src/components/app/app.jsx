@@ -1,6 +1,6 @@
 import React, {PureComponent} from "react";
 import Main from "../main/main.jsx";
-import OffersDetailed from "../offers-detailed/offers-detailed.jsx";
+import OfferDetailed from "../offer-detailed/offer-detailed.jsx";
 import OfferCard from "../offer-card/offer-card.jsx";
 import PropTypes from "prop-types";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
@@ -31,7 +31,7 @@ class App extends PureComponent {
     } else {
       const offerDetailed = offers.find((it) => it.id === activeOfferId);
       return (
-        <OffersDetailed offerDetailed = {offerDetailed}/>
+        <OfferDetailed offer = {offerDetailed}/>
       );
     }
   }
@@ -43,7 +43,7 @@ class App extends PureComponent {
             {this.renderMain()}
           </Route>
           <Route exact path = "/offers-detailed">
-            <OffersDetailed />
+            <OfferDetailed />
           </Route>
         </Switch>
       </BrowserRouter>

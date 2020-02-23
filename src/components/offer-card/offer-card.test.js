@@ -7,6 +7,8 @@ it(`Render OfferCard component`, () => {
   const tree = renderer
     .create(<OfferCard
       offer={offers[0]}
+      handleOfferHover={() => {}}
+      onOfferClick={() => {}}
     />)
     .toJSON();
   expect(tree).toMatchSnapshot();

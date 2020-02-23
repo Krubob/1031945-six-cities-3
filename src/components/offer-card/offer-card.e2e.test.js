@@ -14,13 +14,32 @@ it(`Test OfferCard hover`, () => {
   const article = shallow(
       <OfferCard
         offer={offers[0]}
+        onOfferClick={() => {}}
         onOfferHover={() => {
-          onHoverArticle(offers.name);
+          onHoverArticle(offers.id);
         }}
       />
   );
-
   article.simulate(`mouseover`);
 
-  expect(onHoverArticle.mock.calls[0][0]).toBe(offers.name);
+  expect(onHoverArticle.mock.calls[0][0]).toBe(offers.id);
 });
+
+it(`Test OfferCard title click`, () => {
+  const onClickArticleName = jest.fn((data) => data);
+
+  const article = shallow(
+      <OfferCard
+        offer={offers[0]}
+        onOfferClick={() => {
+          onClickArticleName(offers.id);
+        }}
+        handleOfferHover={() => {}}
+      />
+  );
+  const articleName = article.find(`.place-card__name`);
+  articleName.simulate(`click`);
+
+  expect(onClickArticleName.mock.calls[0][0]).toBe(offers.id);
+});
+

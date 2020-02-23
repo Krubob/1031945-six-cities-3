@@ -1,13 +1,13 @@
 import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 
-class OffersDetailed extends PureComponent {
+class OfferDetailed extends PureComponent {
   constructor(props) {
     super(props);
   }
 
   render() {
-    const {offerDetailed} = this.props;
+    const {offer} = this.props;
     return (
       <div className="page">
         <header className="header">
@@ -49,58 +49,25 @@ class OffersDetailed extends PureComponent {
           <section className="property">
             <div className="property__gallery-container container">
               <div className="property__gallery">
-                <div className="property__image-wrapper">
-                  <img
-                    className="property__image"
-                    src={offerDetailed.photos[0].src}
-                    alt="Photo studio"
-                  />
-                </div>
-                <div className="property__image-wrapper">
-                  <img
-                    className="property__image"
-                    src={offerDetailed.photos[1].src}
-                    alt="Photo studio"
-                  />
-                </div>
-                <div className="property__image-wrapper">
-                  <img
-                    className="property__image"
-                    src={offerDetailed.photos[2].src}
-                    alt="Photo studio"
-                  />
-                </div>
-                <div className="property__image-wrapper">
-                  <img
-                    className="property__image"
-                    src={offerDetailed.photos[3].src}
-                    alt="Photo studio"
-                  />
-                </div>
-                <div className="property__image-wrapper">
-                  <img
-                    className="property__image"
-                    src={offerDetailed.photos[4].src}
-                    alt="Photo studio"
-                  />
-                </div>
-                <div className="property__image-wrapper">
-                  <img
-                    className="property__image"
-                    src={offerDetailed.photos[5].src}
-                    alt="Photo studio"
-                  />
-                </div>
+                {offer.photos.map((it, i) => (
+                  <div key={it.alt + i} className="property__image-wrapper">
+                    <img
+                      className="property__image"
+                      src={it.src}
+                      alt={it.alt}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
             <div className="property__container container">
               <div className="property__wrapper">
                 <div className="property__mark">
-                  <span>{offerDetailed.mark}</span>
+                  <span>{offer.mark}</span>
                 </div>
                 <div className="property__name-wrapper">
                   <h1 className="property__name">
-                    {offerDetailed.name}
+                    {offer.name}
                   </h1>
                   <button className="property__bookmark-button button" type="button">
                     <svg className="property__bookmark-icon" width="31" height="33">
@@ -111,30 +78,30 @@ class OffersDetailed extends PureComponent {
                 </div>
                 <div className="property__rating rating">
                   <div className="property__stars rating__stars">
-                    <span style={{width: offerDetailed.rate + `%`}}></span>
+                    <span style={{width: offer.rate + `%`}}></span>
                     <span className="visually-hidden">Rating</span>
                   </div>
-                  <span className="property__rating-value rating__value">{offerDetailed.rate}</span>
+                  <span className="property__rating-value rating__value">{offer.rate}</span>
                 </div>
                 <ul className="property__features">
                   <li className="property__feature property__feature--entire">
-                    {offerDetailed.type}
+                    {offer.type}
                   </li>
                   <li className="property__feature property__feature--bedrooms">
-                    {offerDetailed.bedrooms} Bedrooms
+                    {offer.bedrooms} Bedrooms
                   </li>
                   <li className="property__feature property__feature--adults">
-                  Max {offerDetailed.guests} adults
+                  Max {offer.guests} adults
                   </li>
                 </ul>
                 <div className="property__price">
-                  <b className="property__price-value">&euro;{offerDetailed.price}</b>
+                  <b className="property__price-value">&euro;{offer.price}</b>
                   <span className="property__price-text">&nbsp;night</span>
                 </div>
                 <div className="property__inside">
                   <h2 className="property__inside-title">What&apos;s inside</h2>
                   <ul className="property__inside-list">
-                    {offerDetailed.devices.map((it, id) => (
+                    {offer.devices.map((it, id) => (
                       <li key={it + id} className="property__inside-item">
                         {it}
                       </li>
@@ -149,18 +116,18 @@ class OffersDetailed extends PureComponent {
                     >
                       <img
                         className="property__avatar user__avatar"
-                        src={offerDetailed.owner.avatar}
+                        src={offer.owner.avatar}
                         width="74"
                         height="74"
                         alt="Host avatar"
                       />
                     </div>
                     <span className="property__user-name">
-                      {offerDetailed.owner.username}
+                      {offer.owner.username}
                     </span>
                   </div>
                   <div className="property__description">
-                    {offerDetailed.description.map((it, id) => (
+                    {offer.description.map((it, id) => (
                       <p key={it + id} className="property__text">
                         {it}
                       </p>
@@ -483,12 +450,13 @@ class OffersDetailed extends PureComponent {
   }
 }
 
-OffersDetailed.propTypes = {
-  offerDetailed: PropTypes.shape({
+OfferDetailed.propTypes = {
+  offer: PropTypes.shape({
     id: PropTypes.string.isRequired,
     photos: PropTypes.arrayOf(
         PropTypes.shape({
-          src: PropTypes.string.isRequired
+          src: PropTypes.string.isRequired,
+          alt: PropTypes.string.isRequired
         }).isRequired
     ),
     name: PropTypes.string.isRequired,
@@ -513,4 +481,4 @@ OffersDetailed.propTypes = {
   })
 };
 
-export default OffersDetailed;
+export default OfferDetailed;
