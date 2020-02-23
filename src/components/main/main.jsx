@@ -9,7 +9,7 @@ class Main extends PureComponent {
   }
 
   render() {
-    const {offers, onTitleButtonClick} = this.props;
+    const {offers, onOfferClick} = this.props;
 
     return (
       <div className="page page--gray page--main">
@@ -17,7 +17,7 @@ class Main extends PureComponent {
           <div className="container">
             <div className="header__wrapper">
               <div className="header__left">
-                <a onClick={onTitleButtonClick} className="header__logo-link header__logo-link--active">
+                <a className="header__logo-link header__logo-link--active">
                   <img className="header__logo" src="img/logo.svg" alt="6 cities logo" width="81" height="41"/>
                 </a>
               </div>
@@ -101,7 +101,7 @@ class Main extends PureComponent {
             </select> */}
 
                 </form>
-                {<OfferList offers={offers}/>}
+                {<OfferList onOfferClick={onOfferClick} offers={offers}/>}
               </section>
               <div className="cities__right-section">
                 <section className="cities__map map"></section>
@@ -116,7 +116,7 @@ class Main extends PureComponent {
 
 Main.propTypes = {
   offers: PropTypes.arrayOf(OfferCard.propTypes.offer),
-  onTitleButtonClick: PropTypes.func
+  onOfferClick: PropTypes.func
 };
 
 export default Main;

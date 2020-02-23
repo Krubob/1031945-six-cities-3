@@ -1,26 +1,197 @@
 export default [
   {
+    id: `4353434`,
+    photos: [
+      {
+        src: `img/room.jpg`
+      },
+      {
+        src: `img/apartment-01.jpg`
+      },
+      {
+        src: `img/apartment-02.jpg`
+      },
+      {
+        src: `img/apartment-03.jpg`
+      },
+      {
+        src: `img/studio-01.jpg`
+      },
+      {
+        src: `img/apartment-01.jpg`
+      }
+    ],
     name: `Beautiful & luxurious apartment at great location`,
-    image: `img/apartment-01.jpg`,
+    description: [`A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.`,
+      `An independent House, strategically located between Rembrand Square and National Opera, but where the bustle of the city comes to rest in this alley flowery and colorful`],
+    mark: `Premium`,
     type: `Apartment`,
-    price: `120`
+    rate: 48,
+    bedrooms: 3,
+    guests: 4,
+    price: `120`,
+    devices: [`Wi-Fi`, `Heating`, `Kitchen`, `Fridge`, `Washing machine`, `Coffee machine`, `Dishwasher`, `Towels`, `Baby seat`, `Cabel TV`],
+    owner: {
+      avatar: `img/avatar-angelina.jpg`,
+      username: `Angelina`,
+      super: `true`,
+    },
+    image: `img/apartment-01.jpg`
   },
   {
+    id: `3345674`,
+    photos: [
+      {
+        src: `img/room.jpg`
+      },
+      {
+        src: `img/apartment-01.jpg`
+      },
+      {
+        src: `img/apartment-02.jpg`
+      },
+      {
+        src: `img/apartment-03.jpg`
+      },
+      {
+        src: `img/studio-01.jpg`
+      },
+      {
+        src: `img/apartment-01.jpg`
+      }
+    ],
     name: `Wood and stone place`,
-    image: `img/room.jpg`,
+    description: [`A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.`,
+      `An independent House, strategically located between Rembrand Square and National Opera, but where the bustle of the city comes to rest in this alley flowery and colorful`],
+    mark: ``,
     type: `Private room`,
-    price: `80`
+    rate: 40,
+    bedrooms: 3,
+    guests: 4,
+    price: `80`,
+    devices: [`Wi-Fi`, `Heating`, `Kitchen`, `Fridge`],
+    owner: {
+      avatar: `img/avatar-angelina.jpg`,
+      username: `Mark`,
+      super: `false`,
+    },
+    image: `img/room.jpg`
   },
   {
+    id: `1225459`,
+    photos: [
+      {
+        src: `img/room.jpg`
+      },
+      {
+        src: `img/apartment-01.jpg`
+      },
+      {
+        src: `img/apartment-02.jpg`
+      },
+      {
+        src: `img/apartment-03.jpg`
+      },
+      {
+        src: `img/studio-01.jpg`
+      },
+      {
+        src: `img/apartment-01.jpg`
+      }
+    ],
     name: `Canal View Prinsengracht`,
-    image: `img/apartment-02.jpg`,
+    description: [`A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.`,
+      `An independent House, strategically located between Rembrand Square and National Opera, but where the bustle of the city comes to rest in this alley flowery and colorful`],
+    mark: `Premium`,
     type: `Apartment`,
-    price: `132`
+    rate: 40,
+    bedrooms: 3,
+    guests: 4,
+    price: `120`,
+    devices: [`Coffee machine`, `Dishwasher`, `Towels`, `Baby seat`, `Cabel TV`],
+    owner: {
+      avatar: `img/avatar-angelina.jpg`,
+      username: `Bob`,
+      super: `true`,
+    },
+    image: `img/apartment-02.jpg`
   },
   {
+    id: `4298509`,
+    photos: [
+      {
+        src: `img/room.jpg`
+      },
+      {
+        src: `img/apartment-01.jpg`
+      },
+      {
+        src: `img/apartment-02.jpg`
+      },
+      {
+        src: `img/apartment-03.jpg`
+      },
+      {
+        src: `img/studio-01.jpg`
+      },
+      {
+        src: `img/apartment-01.jpg`
+      }
+    ],
     name: `Nice, cozy, warm big bed apartment`,
-    image: `img/apartment-03.jpg`,
+    description: [`A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.`,
+      `An independent House, strategically located between Rembrand Square and National Opera, but where the bustle of the city comes to rest in this alley flowery and colorful`],
+    mark: `Premium`,
     type: `Apartment`,
-    price: `180`
+    rate: 50,
+    bedrooms: 3,
+    guests: 4,
+    price: `180`,
+    devices: [`Fridge`, `Washing machine`, `Coffee machine`, `Dishwasher`, `Towels`],
+    owner: {
+      avatar: `img/avatar-angelina.jpg`,
+      username: `Robert`,
+      super: `false`,
+    },
+    image: `img/apartment-03.jpg`
   },
+  {
+    id: `7275453`,
+    photos: [
+      {
+        src: `img/room.jpg`
+      },
+      {
+        src: `img/apartment-01.jpg`
+      },
+      {
+        src: `img/apartment-02.jpg`
+      },
+      {
+        src: `img/apartment-03.jpg`
+      },
+      {
+        src: `img/studio-01.jpg`
+      },
+      {
+        src: `img/apartment-01.jpg`
+      }
+    ],
+    name: `Silient place`,
+    description: [`A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.`,
+      `An independent House, strategically located between Rembrand Square and National Opera, but where the bustle of the city comes to rest in this alley flowery and colorful`],
+    mark: ``,
+    type: `Private room`,
+    rate: 40,
+    bedrooms: 3,
+    guests: 4,
+    price: `80`,
+    devices: [`Fridge`, `Washing machine`, `Coffee machine`, `Dishwasher`],
+    owner: {
+      avatar: `img/avatar-angelina.jpg`,
+      username: `Alex`,
+      super: `true`,
+    },
+    image: `img/room.jpg`
+  }
 ];

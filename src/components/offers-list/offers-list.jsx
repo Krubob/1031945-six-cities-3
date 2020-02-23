@@ -19,11 +19,11 @@ class OffersList extends PureComponent {
   }
 
   render() {
-    const {offers} = this.props;
+    const {offers, onOfferClick} = this.props;
     return (
       <div className="cities__places-list places__list tabs__content">
         {offers.map((it) => (
-          <OfferCard key={it.name} offer={it} onOfferHover={this.handleOfferHover}/>
+          <OfferCard key={it.name} offer={it} onOfferHover={this.handleOfferHover} onOfferClick={onOfferClick}/>
         ))}
       </div>
     );
@@ -32,6 +32,7 @@ class OffersList extends PureComponent {
 
 OffersList.propTypes = {
   handleOfferHover: PropTypes.func,
+  onOfferClick: PropTypes.func,
   offers: PropTypes.arrayOf(OfferCard.propTypes.offer)
 };
 
