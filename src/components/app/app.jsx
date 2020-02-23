@@ -1,26 +1,58 @@
 import React, {PureComponent} from "react";
 import Main from "../main/main.jsx";
-import PropTypes from "prop-types";
+import OfferDetailed from "../offer-detailed/offer-detailed.jsx";
 import OfferCard from "../offer-card/offer-card.jsx";
-
-const onTitleButtonClick = () => {};
+import PropTypes from "prop-types";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 class App extends PureComponent {
   constructor(props) {
     super(props);
+    this.handleOfferClick = this.handleOfferClick.bind(this);
+    this.state = {
+      activeOfferId: null
+    };
   }
 
-  render() {
-    const {offers} = this.props;
+  handleOfferClick(id = null) {
+    this.setState({
+      activeOfferId: id
+    });
+  }
 
+  renderMain() {
+    const {offers} = this.props;
+    const {activeOfferId} = this.state;
+
+    if (activeOfferId === null) {
+      return (
+        <Main offers = {offers} onOfferClick = {this.handleOfferClick}></Main>
+      );
+    } else {
+      const offerDetailed = offers.find((it) => it.id === activeOfferId);
+      return (
+        <OfferDetailed offer = {offerDetailed}/>
+      );
+    }
+  }
+  render() {
     return (
-      <Main offers={offers} onTitleButtonClick={onTitleButtonClick}/>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path = "/">
+            {this.renderMain()}
+          </Route>
+          <Route exact path = "/offers-detailed">
+            <OfferDetailed />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
 
 App.propTypes = {
-  onTitleButtonClick: PropTypes.func,
+  onOfferClick: PropTypes.func,
   offers: PropTypes.arrayOf(OfferCard.propTypes.offer)
 };
 
