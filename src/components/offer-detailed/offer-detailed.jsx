@@ -478,6 +478,9 @@ OfferDetailed.propTypes = {
     rate: PropTypes.number.isRequired,
     bedrooms: PropTypes.number.isRequired,
     guests: PropTypes.number.isRequired,
+    coordinates: PropTypes.arrayOf(
+        PropTypes.number.isRequired
+    ).isRequired,
   })
 };
 

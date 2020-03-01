@@ -43,6 +43,7 @@ export default [
       super: `true`,
     },
     image: `img/apartment-01.jpg`,
+    city: [52.38333, 4.9],
     coordinates: [52.3909553943508, 4.85309666406198]
   },
   {
@@ -89,6 +90,7 @@ export default [
       super: `false`,
     },
     image: `img/room.jpg`,
+    city: [52.38333, 4.9],
     coordinates: [52.379553943508, 4.95309666406198]
   },
   {
@@ -135,6 +137,7 @@ export default [
       super: `true`,
     },
     image: `img/apartment-02.jpg`,
+    city: [52.38333, 4.9],
     coordinates: [52.369553943508, 4.85309666406198]
   },
   {
@@ -181,6 +184,7 @@ export default [
       super: `false`,
     },
     image: `img/apartment-03.jpg`,
+    city: [52.38333, 4.9],
     coordinates: [52.3909553943508, 4.929309666406198]
   },
   {
@@ -227,6 +231,7 @@ export default [
       super: `true`,
     },
     image: `img/room.jpg`,
+    city: [52.38333, 4.9],
     coordinates: [52.3809553943508, 4.939309666406198]
   }
 ];

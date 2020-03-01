@@ -1,19 +1,18 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import OfferCard from "./offer-card.jsx";
+import Map from "./map.jsx";
 import offers from "../../mocks/offers.js";
 
-it(`Render OfferCard component`, () => {
+it(`Render Map`, () => {
   const tree = renderer
-    .create(<OfferCard
-      offer={offers[0]}
-      handleOfferHover={() => {}}
-      onOfferClick={() => {}}
+    .create(<Map
+      offers={offers}
     />, {
       createNodeMock: () => {
         return document.createElement(`div`);
       }
     })
     .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
