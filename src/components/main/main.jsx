@@ -2,6 +2,7 @@ import React, {PureComponent} from "react";
 import OfferList from "../offers-list/offers-list.jsx";
 import PropTypes from "prop-types";
 import OfferCard from "../offer-card/offer-card.jsx";
+import Map from "../map/map.jsx";
 
 class Main extends PureComponent {
   constructor(props) {
@@ -104,7 +105,9 @@ class Main extends PureComponent {
                 {<OfferList onOfferClick={onOfferClick} offers={offers}/>}
               </section>
               <div className="cities__right-section">
-                <section className="cities__map map"></section>
+                <section className="cities__map map">
+                  <Map offers={offers}/>
+                </section>
               </div>
             </div>
           </div>

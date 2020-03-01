@@ -42,7 +42,8 @@ export default [
       username: `Angelina`,
       super: `true`,
     },
-    image: `img/apartment-01.jpg`
+    image: `img/apartment-01.jpg`,
+    coordinates: [52.3909553943508, 4.85309666406198]
   },
   {
     id: `3345674`,
@@ -87,7 +88,8 @@ export default [
       username: `Mark`,
       super: `false`,
     },
-    image: `img/room.jpg`
+    image: `img/room.jpg`,
+    coordinates: [52.379553943508, 4.95309666406198]
   },
   {
     id: `1225459`,
@@ -132,7 +134,8 @@ export default [
       username: `Bob`,
       super: `true`,
     },
-    image: `img/apartment-02.jpg`
+    image: `img/apartment-02.jpg`,
+    coordinates: [52.369553943508, 4.85309666406198]
   },
   {
     id: `4298509`,
@@ -177,7 +180,8 @@ export default [
       username: `Robert`,
       super: `false`,
     },
-    image: `img/apartment-03.jpg`
+    image: `img/apartment-03.jpg`,
+    coordinates: [52.3909553943508, 4.929309666406198]
   },
   {
     id: `7275453`,
@@ -222,6 +226,7 @@ export default [
       username: `Alex`,
       super: `true`,
     },
-    image: `img/room.jpg`
+    image: `img/room.jpg`,
+    coordinates: [52.3809553943508, 4.939309666406198]
   }
 ];
