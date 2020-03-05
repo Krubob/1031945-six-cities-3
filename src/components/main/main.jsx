@@ -105,9 +105,7 @@ class Main extends PureComponent {
                 {<OfferList onOfferClick={onOfferClick} offers={offers}/>}
               </section>
               <div className="cities__right-section">
-                <section className="cities__map map">
-                  <Map offers={offers}/>
-                </section>
+                <Map offers={offers}/>
               </div>
             </div>
           </div>

@@ -3,17 +3,16 @@ import leaflet from "leaflet";
 import PropTypes from "prop-types";
 import OfferCard from "../offer-card/offer-card.jsx";
 
-const zoom = 12;
-const icon = leaflet.icon({
-  iconUrl: `img/pin.svg`,
-  iconSize: [30, 30]
-});
-
 class Map extends PureComponent {
   constructor(props) {
     super(props);
 
     this._map = createRef();
+    this._icon = leaflet.icon({
+      iconUrl: `img/pin.svg`,
+      iconSize: [30, 30]
+    });
+    this._zoom = 12;
   }
 
   componentDidMount() {
@@ -22,11 +21,11 @@ class Map extends PureComponent {
 
     const map = leaflet.map(this._map.current, {
       center: city,
-      zoom,
+      zoom: this._zoom,
       zoomControl: false,
       marker: true
     });
-    map.setView(city, zoom);
+    map.setView(city, this._zoom);
 
     leaflet
   .tileLayer(`https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png`, {
@@ -36,20 +35,20 @@ class Map extends PureComponent {
 
     offers.map((offer) => (
       leaflet
-      .marker(offer.coordinates, {icon})
+      .marker(offer.coordinates, this._icon)
       .addTo(map)
     ));
   }
 
   render() {
     return (
-      <div id="map" style={{height: `100%`}} ref={this._map}></div>
+      <section className="cities__map map" ref={this._map}/>
     );
   }
 }
 
 Map.propTypes = {
-  offers: PropTypes.arrayOf(OfferCard.propTypes.offer)
+  offers: PropTypes.arrayOf(OfferCard.propTypes.offer),
 };
 
 export default Map;

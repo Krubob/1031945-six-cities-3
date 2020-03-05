@@ -10,7 +10,7 @@ it(`Render Main`, () => {
       onOfferClick={() => {}}
     />, {
       createNodeMock: () => {
-        return document.createElement(`div`);
+        return document.createElement(`section`);
       }
     })
     .toJSON();

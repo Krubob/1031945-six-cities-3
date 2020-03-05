@@ -9,7 +9,7 @@ it(`Render Map`, () => {
       offers={offers}
     />, {
       createNodeMock: () => {
-        return document.createElement(`div`);
+        return document.createElement(`section`);
       }
     })
     .toJSON();
