@@ -8,7 +8,11 @@ it(`Render Main`, () => {
     .create(<Main
       offers={offers}
       onOfferClick={() => {}}
-    />)
+    />, {
+      createNodeMock: () => {
+        return document.createElement(`section`);
+      }
+    })
     .toJSON();
   expect(tree).toMatchSnapshot();
 });

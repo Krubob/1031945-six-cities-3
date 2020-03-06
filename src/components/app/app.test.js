@@ -8,7 +8,11 @@ it(`Render App`, () => {
   const tree = renderer
     .create(<App
       offers={offers}
-    />)
+    />, {
+      createNodeMock: () => {
+        return document.createElement(`section`);
+      }
+    })
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
