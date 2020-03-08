@@ -139,9 +139,7 @@ class Reviews extends PureComponent {
 Reviews.propTypes = {
   review: PropTypes.shape({
     id: PropTypes.string.isRequired,
-    usersReviewsArr: PropTypes.arrayOf(
-        PropTypes.shape(ReviewItem.propTypes.item)
-    ).isRequired
+    usersReviewsArr: PropTypes.arrayOf(ReviewItem.propTypes.item)
   })
 };
 
