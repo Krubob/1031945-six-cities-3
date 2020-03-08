@@ -21,7 +21,7 @@ class App extends PureComponent {
   }
 
   renderMain() {
-    const {offers} = this.props;
+    const {offers, reviews} = this.props;
     const {activeOfferId} = this.state;
 
     if (activeOfferId === null) {
@@ -30,8 +30,9 @@ class App extends PureComponent {
       );
     } else {
       const offerDetailed = offers.find((it) => it.id === activeOfferId);
+      const reviewItem = reviews.find((it) => it.id === activeOfferId);
       return (
-        <OfferDetailed offer = {offerDetailed}/>
+        <OfferDetailed review = {reviewItem} offer = {offerDetailed}/>
       );
     }
   }
@@ -53,7 +54,20 @@ class App extends PureComponent {
 
 App.propTypes = {
   onOfferClick: PropTypes.func,
-  offers: PropTypes.arrayOf(OfferCard.propTypes.offer)
+  offers: PropTypes.arrayOf(OfferCard.propTypes.offer),
+  reviews: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        author: PropTypes.string.isRequired,
+        avatar: PropTypes.shape({
+          src: PropTypes.string.isRequired,
+          alt: PropTypes.string.isRequired
+        }),
+        rate: PropTypes.number.isRequired,
+        text: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
+      }).isRequired
+  )
 };
 
 export default App;
