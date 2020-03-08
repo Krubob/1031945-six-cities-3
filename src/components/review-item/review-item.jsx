@@ -43,7 +43,6 @@ class ReviewItem extends PureComponent {
 
 ReviewItem.propTypes = {
   item: PropTypes.shape({
-    id: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     avatar: PropTypes.shape({
       src: PropTypes.string.isRequired,
@@ -52,7 +51,7 @@ ReviewItem.propTypes = {
     rate: PropTypes.number.isRequired,
     text: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
-  }).isRequired
+  })
 };
 
 export default ReviewItem;

@@ -1,6 +1,7 @@
 import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import Reviews from "../reviews/reviews.jsx";
+import ReviewsList from "../reviews-list/reviews-list.jsx";
 
 class OfferDetailed extends PureComponent {
   constructor(props) {
@@ -333,19 +334,7 @@ OfferDetailed.propTypes = {
         PropTypes.number.isRequired
     ).isRequired,
   }),
-  review: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        author: PropTypes.string.isRequired,
-        avatar: PropTypes.shape({
-          src: PropTypes.string.isRequired,
-          alt: PropTypes.string.isRequired
-        }),
-        rate: PropTypes.number.isRequired,
-        text: PropTypes.string.isRequired,
-        date: PropTypes.string.isRequired,
-      }).isRequired
-  )
+  review: ReviewsList.propTypes.review
 };
 
 export default OfferDetailed;

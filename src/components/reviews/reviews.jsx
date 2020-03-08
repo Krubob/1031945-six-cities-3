@@ -1,5 +1,6 @@
 import React, {PureComponent} from "react";
 import ReviewsList from "../reviews-list/reviews-list.jsx";
+import ReviewItem from "../review-item/review-item.jsx";
 import PropTypes from "prop-types";
 
 
@@ -15,7 +16,7 @@ class Reviews extends PureComponent {
       <section className="property__reviews reviews">
         <h2 className="reviews__title">
         Reviews &middot;
-          <span className="reviews__amount">10</span>
+          <span className="reviews__amount">{review.usersReviewsArr.length}</span>
         </h2>
         {<ReviewsList review={review} />}
         <form className="reviews__form form" action="#" method="post">
@@ -136,19 +137,12 @@ class Reviews extends PureComponent {
 }
 
 Reviews.propTypes = {
-  review: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        author: PropTypes.string.isRequired,
-        avatar: PropTypes.shape({
-          src: PropTypes.string.isRequired,
-          alt: PropTypes.string.isRequired
-        }),
-        rate: PropTypes.number.isRequired,
-        text: PropTypes.string.isRequired,
-        date: PropTypes.string.isRequired,
-      })
-  ).isRequired
+  review: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    usersReviewsArr: PropTypes.arrayOf(
+        PropTypes.shape(ReviewItem.propTypes.item)
+    ).isRequired
+  })
 };
 
 export default Reviews;

@@ -2,6 +2,7 @@ import React, {PureComponent} from "react";
 import Main from "../main/main.jsx";
 import OfferDetailed from "../offer-detailed/offer-detailed.jsx";
 import OfferCard from "../offer-card/offer-card.jsx";
+import ReviewsList from "../reviews-list/reviews-list.jsx";
 import PropTypes from "prop-types";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
@@ -55,19 +56,7 @@ class App extends PureComponent {
 App.propTypes = {
   onOfferClick: PropTypes.func,
   offers: PropTypes.arrayOf(OfferCard.propTypes.offer),
-  reviews: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        author: PropTypes.string.isRequired,
-        avatar: PropTypes.shape({
-          src: PropTypes.string.isRequired,
-          alt: PropTypes.string.isRequired
-        }),
-        rate: PropTypes.number.isRequired,
-        text: PropTypes.string.isRequired,
-        date: PropTypes.string.isRequired,
-      }).isRequired
-  )
+  reviews: PropTypes.arrayOf(ReviewsList.propTypes.review)
 };
 
 export default App;
