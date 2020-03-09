@@ -16,9 +16,9 @@ class Reviews extends PureComponent {
       <section className="property__reviews reviews">
         <h2 className="reviews__title">
         Reviews &middot;
-          <span className="reviews__amount">{review.usersReviewsArr.length}</span>
+          <span className="reviews__amount">{review.reviews.length}</span>
         </h2>
-        {<ReviewsList review={review} />}
+        <ReviewsList review={review} />
         <form className="reviews__form form" action="#" method="post">
           <label className="reviews__label form__label" htmlFor="review">
           Your review
@@ -139,7 +139,7 @@ class Reviews extends PureComponent {
 Reviews.propTypes = {
   review: PropTypes.shape({
     id: PropTypes.string.isRequired,
-    usersReviewsArr: PropTypes.arrayOf(ReviewItem.propTypes.item)
+    reviews: PropTypes.arrayOf(ReviewItem.propTypes.item)
   })
 };
 

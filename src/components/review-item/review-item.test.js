@@ -6,7 +6,7 @@ import reviews from "../../mocks/reviews";
 it(`Render ReviewItem component`, () => {
   const tree = renderer
     .create(
-        <ReviewItem item = {reviews[0].usersReviewsArr[0]}/>
+        <ReviewItem item = {reviews[0].reviews[0]}/>
     )
     .toJSON();
 

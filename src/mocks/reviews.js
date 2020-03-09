@@ -1,7 +1,7 @@
 export default [
   {
     id: `4353434`,
-    usersReviewsArr: [
+    reviews: [
       {
         author: `Max`,
         avatar: {
@@ -54,7 +54,7 @@ export default [
   },
   {
     id: `3345674`,
-    usersReviewsArr: [
+    reviews: [
       {
         author: `John`,
         avatar: {
@@ -83,7 +83,7 @@ export default [
   },
   {
     id: `1225459`,
-    usersReviewsArr: [
+    reviews: [
       {
         author: `Alex`,
         avatar: {
@@ -136,7 +136,7 @@ export default [
   },
   {
     id: `4298509`,
-    usersReviewsArr: [
+    reviews: [
       {
         author: `Grigoriy`,
         avatar: {
@@ -165,7 +165,7 @@ export default [
   },
   {
     id: `7275453`,
-    usersReviewsArr: [
+    reviews: [
       {
         author: `Mike`,
         avatar: {

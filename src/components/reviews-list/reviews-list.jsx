@@ -11,7 +11,7 @@ class ReviewsList extends PureComponent {
     const {review} = this.props;
     return (
       <ul className="reviews__list">
-        {review.usersReviewsArr.map((it, id) => <ReviewItem key = {id + it.author} item = {it}/>)}
+        {review.reviews.map((it, id) => <ReviewItem key = {id + it.author} item = {it}/>)}
       </ul>
     );
   }
@@ -20,7 +20,7 @@ class ReviewsList extends PureComponent {
 ReviewsList.propTypes = {
   review: PropTypes.shape({
     id: PropTypes.string.isRequired,
-    usersReviewsArr: PropTypes.arrayOf(ReviewItem.propTypes.item)
+    reviews: PropTypes.arrayOf(ReviewItem.propTypes.item)
   })
 };
 
