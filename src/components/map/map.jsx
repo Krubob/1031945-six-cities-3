@@ -16,7 +16,7 @@ class Map extends PureComponent {
   }
 
   componentDidMount() {
-    const {offers} = this.props;
+    const {pins} = this.props;
     const city = this.props.offers[0].city;
 
     const map = leaflet.map(this._map.current, {
@@ -33,22 +33,30 @@ class Map extends PureComponent {
   })
   .addTo(map);
 
-    offers.map((offer) => (
-      leaflet
-      .marker(offer.coordinates, this._icon)
-      .addTo(map)
-    ));
+    if (pins) {
+      pins.map((it) => {
+        leaflet
+        .marker(it, this._icon)
+        .addTo(map);
+      });
+    }
   }
 
   render() {
     return (
-      <section className="cities__map map" ref={this._map}/>
+      <section ref={this._map} className={`${this.props.nearMap ? `property__map` : `cities__map`} map`}/>
     );
   }
 }
 
 Map.propTypes = {
   offers: PropTypes.arrayOf(OfferCard.propTypes.offer),
+  pins: PropTypes.arrayOf(
+      PropTypes.arrayOf(
+          PropTypes.number.isRequired
+      ).isRequired
+  ).isRequired,
+  nearMap: PropTypes.bool
 };
 
 export default Map;

@@ -58,7 +58,7 @@ exports[`Render ReviewItem component 1`] = `
       className="reviews__time"
       dateTime="2019-04-24"
     >
-      April 2019
+      April 23, 2019
     </time>
   </div>
 </li>

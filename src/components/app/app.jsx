@@ -33,7 +33,7 @@ class App extends PureComponent {
       const offerDetailed = offers.find((it) => it.id === activeOfferId);
       const reviewItem = reviews.find((it) => it.id === activeOfferId);
       return (
-        <OfferDetailed review = {reviewItem} offer = {offerDetailed}/>
+        <OfferDetailed review = {reviewItem} offer = {offerDetailed} offers = {offers}/>
       );
     }
   }

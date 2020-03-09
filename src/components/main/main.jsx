@@ -1,5 +1,5 @@
 import React, {PureComponent} from "react";
-import OfferList from "../offers-list/offers-list.jsx";
+import OffersList from "../offers-list/offers-list.jsx";
 import PropTypes from "prop-types";
 import OfferCard from "../offer-card/offer-card.jsx";
 import Map from "../map/map.jsx";
@@ -11,6 +11,7 @@ class Main extends PureComponent {
 
   render() {
     const {offers, onOfferClick} = this.props;
+    const pins = offers.map((it) => it.coordinates);
 
     return (
       <div className="page page--gray page--main">
@@ -102,10 +103,10 @@ class Main extends PureComponent {
             </select> */}
 
                 </form>
-                {<OfferList onOfferClick={onOfferClick} offers={offers}/>}
+                {<OffersList onOfferClick={onOfferClick} offers={offers}/>}
               </section>
               <div className="cities__right-section">
-                <Map offers={offers}/>
+                <Map pins={pins} offers={offers}/>
               </div>
             </div>
           </div>
