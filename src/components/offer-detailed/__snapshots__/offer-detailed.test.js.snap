@@ -340,11 +340,11 @@ exports[`Render OfferDetail component 1`] = `
             <h2
               className="reviews__title"
             >
-              Reviews · 
+              Reviews ·
               <span
                 className="reviews__amount"
               >
-                1
+                4
               </span>
             </h2>
             <ul
@@ -385,7 +385,7 @@ exports[`Render OfferDetail component 1`] = `
                       <span
                         style={
                           Object {
-                            "width": "80%",
+                            "width": 4,
                           }
                         }
                       />
@@ -399,13 +399,198 @@ exports[`Render OfferDetail component 1`] = `
                   <p
                     className="reviews__text"
                   >
-                    A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.
+                    A quiet cozy and picturesque that hides behind a a river
+    by the unique lightness of Amsterdam. The building is
+    green and from 18th century
                   </p>
                   <time
                     className="reviews__time"
                     dateTime="2019-04-24"
                   >
-                    April 2019
+                    April 23, 2019
+                  </time>
+                </div>
+              </li>
+              <li
+                className="reviews__item"
+              >
+                <div
+                  className="reviews__user user"
+                >
+                  <div
+                    className="reviews__avatar-wrapper user__avatar-wrapper"
+                  >
+                    <img
+                      alt="Reviews avatar"
+                      className="reviews__avatar user__avatar"
+                      height="54"
+                      src="img/avatar-max.jpg"
+                      width="54"
+                    />
+                  </div>
+                  <span
+                    className="reviews__user-name"
+                  >
+                    Mark
+                  </span>
+                </div>
+                <div
+                  className="reviews__info"
+                >
+                  <div
+                    className="reviews__rating rating"
+                  >
+                    <div
+                      className="reviews__stars rating__stars"
+                    >
+                      <span
+                        style={
+                          Object {
+                            "width": 2,
+                          }
+                        }
+                      />
+                      <span
+                        className="visually-hidden"
+                      >
+                        Rating
+                      </span>
+                    </div>
+                  </div>
+                  <p
+                    className="reviews__text"
+                  >
+                    A quiet cozy and picturesque that hides behind a a river
+      by the unique lightness of Amsterdam. The building is
+      green and from 18th century
+                  </p>
+                  <time
+                    className="reviews__time"
+                    dateTime="2019-04-24"
+                  >
+                    May 18, 2018
+                  </time>
+                </div>
+              </li>
+              <li
+                className="reviews__item"
+              >
+                <div
+                  className="reviews__user user"
+                >
+                  <div
+                    className="reviews__avatar-wrapper user__avatar-wrapper"
+                  >
+                    <img
+                      alt="Reviews avatar"
+                      className="reviews__avatar user__avatar"
+                      height="54"
+                      src="img/avatar-max.jpg"
+                      width="54"
+                    />
+                  </div>
+                  <span
+                    className="reviews__user-name"
+                  >
+                    Mary
+                  </span>
+                </div>
+                <div
+                  className="reviews__info"
+                >
+                  <div
+                    className="reviews__rating rating"
+                  >
+                    <div
+                      className="reviews__stars rating__stars"
+                    >
+                      <span
+                        style={
+                          Object {
+                            "width": 2.5,
+                          }
+                        }
+                      />
+                      <span
+                        className="visually-hidden"
+                      >
+                        Rating
+                      </span>
+                    </div>
+                  </div>
+                  <p
+                    className="reviews__text"
+                  >
+                    A quiet cozy and picturesque that hides behind a a river
+      by the unique lightness of Amsterdam. The building is
+      green and from 18th century
+                  </p>
+                  <time
+                    className="reviews__time"
+                    dateTime="2019-04-24"
+                  >
+                    December 11, 2019
+                  </time>
+                </div>
+              </li>
+              <li
+                className="reviews__item"
+              >
+                <div
+                  className="reviews__user user"
+                >
+                  <div
+                    className="reviews__avatar-wrapper user__avatar-wrapper"
+                  >
+                    <img
+                      alt="Reviews avatar"
+                      className="reviews__avatar user__avatar"
+                      height="54"
+                      src="img/avatar-max.jpg"
+                      width="54"
+                    />
+                  </div>
+                  <span
+                    className="reviews__user-name"
+                  >
+                    Daniel
+                  </span>
+                </div>
+                <div
+                  className="reviews__info"
+                >
+                  <div
+                    className="reviews__rating rating"
+                  >
+                    <div
+                      className="reviews__stars rating__stars"
+                    >
+                      <span
+                        style={
+                          Object {
+                            "width": 2.8,
+                          }
+                        }
+                      />
+                      <span
+                        className="visually-hidden"
+                      >
+                        Rating
+                      </span>
+                    </div>
+                  </div>
+                  <p
+                    className="reviews__text"
+                  >
+                    A quiet cozy and picturesque that hides behind a a river
+        by the unique lightness of Amsterdam. The building is
+        green and from 18th century
+                  </p>
+                  <time
+                    className="reviews__time"
+                    dateTime="2019-04-24"
+                  >
+                    March 17, 2020
                   </time>
                 </div>
               </li>
@@ -548,16 +733,18 @@ exports[`Render OfferDetail component 1`] = `
                   className="reviews__help"
                 >
                   To submit review please make sure to set
+                   
                   <span
                     className="reviews__star"
                   >
-                     rating
+                    rating
                   </span>
                    and describe your stay with at least
+                   
                   <b
                     className="reviews__text-amount"
                   >
-                     50 characters
+                    50 characters
                   </b>
                   .
                 </p>
@@ -593,9 +780,11 @@ exports[`Render OfferDetail component 1`] = `
         >
           <article
             className="near-places__card place-card"
+            onMouseOver={[Function]}
           >
+            
             <div
-              className="near-places__image-wrapper place-card__image-wrapper"
+              className="cities__image-wrapper place-card__image-wrapper"
             >
               <a
                 href="#"
@@ -621,7 +810,8 @@ exports[`Render OfferDetail component 1`] = `
                   <b
                     className="place-card__price-value"
                   >
-                    €80
+                    €
+                    80
                   </b>
                   <span
                     className="place-card__price-text"
@@ -630,7 +820,7 @@ exports[`Render OfferDetail component 1`] = `
                   </span>
                 </div>
                 <button
-                  className="place-card__bookmark-button place-card__bookmark-button--active button"
+                  className="place-card__bookmark-button button"
                   type="button"
                 >
                   <svg
@@ -645,7 +835,7 @@ exports[`Render OfferDetail component 1`] = `
                   <span
                     className="visually-hidden"
                   >
-                    In bookmarks
+                    To bookmarks
                   </span>
                 </button>
               </div>
@@ -658,7 +848,7 @@ exports[`Render OfferDetail component 1`] = `
                   <span
                     style={
                       Object {
-                        "width": "80%",
+                        "width": "40%",
                       }
                     }
                   />
@@ -671,6 +861,7 @@ exports[`Render OfferDetail component 1`] = `
               </div>
               <h2
                 className="place-card__name"
+                onClick={[Function]}
               >
                 <a
                   href="#"
@@ -687,9 +878,11 @@ exports[`Render OfferDetail component 1`] = `
           </article>
           <article
             className="near-places__card place-card"
+            onMouseOver={[Function]}
           >
+            
             <div
-              className="near-places__image-wrapper place-card__image-wrapper"
+              className="cities__image-wrapper place-card__image-wrapper"
             >
               <a
                 href="#"
@@ -715,7 +908,8 @@ exports[`Render OfferDetail component 1`] = `
                   <b
                     className="place-card__price-value"
                   >
-                    €132
+                    €
+                    120
                   </b>
                   <span
                     className="place-card__price-text"
@@ -752,7 +946,7 @@ exports[`Render OfferDetail component 1`] = `
                   <span
                     style={
                       Object {
-                        "width": "80%",
+                        "width": "40%",
                       }
                     }
                   />
@@ -765,6 +959,7 @@ exports[`Render OfferDetail component 1`] = `
               </div>
               <h2
                 className="place-card__name"
+                onClick={[Function]}
               >
                 <a
                   href="#"
@@ -781,9 +976,11 @@ exports[`Render OfferDetail component 1`] = `
           </article>
           <article
             className="near-places__card place-card"
+            onMouseOver={[Function]}
           >
+            
             <div
-              className="near-places__image-wrapper place-card__image-wrapper"
+              className="cities__image-wrapper place-card__image-wrapper"
             >
               <a
                 href="#"
@@ -809,7 +1006,8 @@ exports[`Render OfferDetail component 1`] = `
                   <b
                     className="place-card__price-value"
                   >
-                    €180
+                    €
+                    180
                   </b>
                   <span
                     className="place-card__price-text"
@@ -846,7 +1044,7 @@ exports[`Render OfferDetail component 1`] = `
                   <span
                     style={
                       Object {
-                        "width": "100%",
+                        "width": "50%",
                       }
                     }
                   />
@@ -859,6 +1057,7 @@ exports[`Render OfferDetail component 1`] = `
               </div>
               <h2
                 className="place-card__name"
+                onClick={[Function]}
               >
                 <a
                   href="#"

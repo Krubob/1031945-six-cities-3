@@ -10,13 +10,13 @@ class OfferCard extends PureComponent {
     const {onOfferHover, offer, onOfferClick} = this.props;
 
     return (
-      <article className="cities__place-card place-card"
-        onMouseOver={() => {
-          onOfferHover(offer.name);
-        }}>
-        <div className="place-card__mark">
-          <span>{offer.mark}</span>
-        </div>
+      <article onMouseOver={() => {
+        onOfferHover(offer.name);
+      }} className= {`${this.props.offerDetail ? `near-places__card` : `cities__place-card`} place-card`}>
+        {!this.props.offerDetail ?
+          <div className="place-card__mark">
+            <span>{offer.mark}</span>
+          </div> : ``}
         <div className="cities__image-wrapper place-card__image-wrapper">
           <a href="#">
             <img className="place-card__image" src={offer.image} width="260" height="200" alt="Place image" />
@@ -87,7 +87,8 @@ OfferCard.propTypes = {
     coordinates: PropTypes.arrayOf(
         PropTypes.number.isRequired
     ).isRequired,
-  }).isRequired
+  }).isRequired,
+  offerDetail: PropTypes.bool
 };
 
 export default OfferCard;
