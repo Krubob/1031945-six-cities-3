@@ -11,10 +11,27 @@ class OfferDetailed extends PureComponent {
     super(props);
   }
 
+  getNearPins(coordinates) {
+    if (coordinates) {
+      return coordinates.map((it) => it.coordinates);
+    } else {
+      return [];
+    }
+  }
+
+  getSameOffers(coordinates, offers) {
+    if (coordinates && offers) {
+      return coordinates.map((it) => offers.find((dataCardsItem) => dataCardsItem.id === it.id));
+    } else {
+      return [];
+    }
+  }
+
   render() {
     const {offer, review, offers} = this.props;
-    const nearPins = offer.nearOffers.map((it) => it.coordinates);
-    const sameOffers = offer.nearOffers.map((it) => offers.find((el) => el.id === it.id));
+
+    const nearPins = this.getNearPins(offer.nearOffers);
+    const sameOffers = this.getSameOffers(offer.nearOffers, offers);
 
     return (
       <div className="page">

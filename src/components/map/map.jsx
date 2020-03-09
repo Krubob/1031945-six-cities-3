@@ -33,13 +33,11 @@ class Map extends PureComponent {
   })
   .addTo(map);
 
-    if (pins) {
-      pins.map((it) => {
-        leaflet
-        .marker(it, this._icon)
+    pins.forEach((pin) => {
+      leaflet
+        .marker(pin, this._icon)
         .addTo(map);
-      });
-    }
+    });
   }
 
   render() {

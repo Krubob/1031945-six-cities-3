@@ -27,7 +27,7 @@ class App extends PureComponent {
 
     if (activeOfferId === null) {
       return (
-        <Main offers = {offers} onOfferClick = {this.handleOfferClick}></Main>
+        <Main offers = {offers} onOfferClick = {this.handleOfferClick} />
       );
     } else {
       const offerDetailed = offers.find((it) => it.id === activeOfferId);
