@@ -24,7 +24,7 @@ class App extends PureComponent {
   }
 
   renderMain() {
-    const {offers, reviews, onChangeCity, getCityOffers} = this.props;
+    const {offers, offersDetailed, reviews, onChangeCity, getCityOffers, city} = this.props;
     const {activeOfferId} = this.state;
 
     if (activeOfferId === null) {
@@ -34,16 +34,17 @@ class App extends PureComponent {
           onChangeCity={onChangeCity}
           offers={offers}
           onOfferClick={this.handleOfferClick}
+          city={city}
         />
       );
     } else {
-      const offerDetailed = offers.find((it) => it.id === activeOfferId);
       const reviewItem = reviews.find((it) => it.id === activeOfferId);
       return (
         <OfferDetailed
           review={reviewItem}
-          offer={offerDetailed}
+          offersDetailed={offersDetailed}
           offers={offers}
+          activeOfferId={activeOfferId}
         />
       );
     }
@@ -78,12 +79,14 @@ const mapDispatchToProps = (dispatch) => ({
   },
   getCityOffers(city) {
     dispatch(ActionCreator.getCityOffers(city));
+    dispatch(ActionCreator.getCityOffersDetailed(city));
   }
 });
 
 const mapStateToProps = (state) => ({
   city: state.city,
-  offers: state.cityOffers,
+  offers: state.offers,
+  offersDetailed: state.offersDetailed,
   reviews: state.reviews
 });
 

@@ -11,7 +11,7 @@ class Main extends PureComponent {
   }
 
   render() {
-    const {offers, onOfferClick, onChangeCity, getCityOffers} = this.props;
+    const {offers, onOfferClick, onChangeCity, getCityOffers, city} = this.props;
     const pins = offers.map((it) => it.coordinates);
 
     return (
@@ -58,10 +58,7 @@ class Main extends PureComponent {
             <div className="cities__places-container container">
               <section className="cities__places places">
                 <h2 className="visually-hidden">Places</h2>
-                <b className="places__found">
-                  {` `}
-                  312 places to stay in Amsterdam
-                </b>
+                <b className="places__found">{offers.length} places to stay in {city}</b>
                 <form className="places__sorting" action="#" method="get">
                   <span className="places__sorting-caption">Sort by</span>
                   <span className="places__sorting-type" tabIndex="0">

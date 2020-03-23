@@ -1,17 +1,16 @@
-import cityOffers from "./mocks/city-offers";
-import reviews from "./mocks/reviews";
+import cityOffers from "./mocks/city-offers.js";
+import reviews from "./mocks/reviews.js";
 import {extend} from "./utils.js";
-// import cityOffersDetailed from "./mock/city-offers-detailed";
 
 const initialCity = Object.keys(cityOffers)[0];
 const initialCityOffers = cityOffers[initialCity];
-// const initialCityOffersDetailed = cityOffersDetailed[initialCity];
+const initialCityOffersDetailed = cityOffers[initialCity];
 
 const initialState = {
   city: initialCity,
   offers: initialCityOffers,
+  offersDetailed: initialCityOffersDetailed,
   reviews
-  // offersDetailed: initialCityOffersDetailed,
 };
 
 const ActionType = {
@@ -31,10 +30,10 @@ const ActionCreator = {
     payload: cityOffers[city]
   }),
 
-  // getCityOffersDetailed: (city) => ({
-  //   type: ActionType.GET_CITY_OFFERS_DETAILED,
-  //   payload: cityOffersDetailed[city]
-  // })
+  getCityOffersDetailed: (city) => ({
+    type: ActionType.GET_CITY_OFFERS_DETAILED,
+    payload: cityOffers[city]
+  })
 };
 
 const reducer = (state = initialState, action)=>{
@@ -43,8 +42,8 @@ const reducer = (state = initialState, action)=>{
       return extend(state, {city: action.payload});
     case ActionType.GET_CITY_OFFERS:
       return extend(state, {offers: action.payload});
-    // case ActionType.GET_CITY_OFFERS_DETAIL:
-    //   return extend(state, {offersDetail: action.payload});
+    case ActionType.GET_CITY_OFFERS_DETAILED:
+      return extend(state, {offersDetailed: action.payload});
   }
   return state;
 };

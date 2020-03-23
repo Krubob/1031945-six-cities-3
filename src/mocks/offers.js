@@ -1,6 +1,7 @@
 export default [
   {
     id: `4353434`,
+    place: `Amsterdam`,
     photos: [
       {
         src: `img/room.jpg`,
@@ -62,6 +63,7 @@ export default [
   },
   {
     id: `3345674`,
+    place: `Amsterdam`,
     photos: [
       {
         src: `img/room.jpg`,
@@ -123,6 +125,7 @@ export default [
   },
   {
     id: `1225459`,
+    place: `Amsterdam`,
     photos: [
       {
         src: `img/room.jpg`,
@@ -184,6 +187,7 @@ export default [
   },
   {
     id: `4298509`,
+    place: `Amsterdam`,
     photos: [
       {
         src: `img/room.jpg`,
@@ -245,6 +249,7 @@ export default [
   },
   {
     id: `7275453`,
+    place: `Amsterdam`,
     photos: [
       {
         src: `img/room.jpg`,

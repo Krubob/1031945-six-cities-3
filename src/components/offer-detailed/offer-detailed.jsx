@@ -28,10 +28,11 @@ class OfferDetailed extends PureComponent {
   }
 
   render() {
-    const {offer, review, offers} = this.props;
+    const {review, offers, activeOfferId, offersDetailed} = this.props;
 
-    const nearPins = this.getNearPins(offer.nearOffers);
-    const sameOffers = this.getSameOffers(offer.nearOffers, offers);
+    const element = offersDetailed.find((it) => it.id === activeOfferId);
+    const nearPins = this.getNearPins(element.nearOffers);
+    const sameOffers = this.getSameOffers(element.nearOffers, offers);
 
     return (
       <div className="page">
@@ -74,7 +75,7 @@ class OfferDetailed extends PureComponent {
           <section className="property">
             <div className="property__gallery-container container">
               <div className="property__gallery">
-                {offer.photos.map((it, i) => (
+                {element.photos.map((it, i) => (
                   <div key={it.alt + i} className="property__image-wrapper">
                     <img
                       className="property__image"
@@ -88,11 +89,11 @@ class OfferDetailed extends PureComponent {
             <div className="property__container container">
               <div className="property__wrapper">
                 <div className="property__mark">
-                  <span>{offer.mark}</span>
+                  <span>{element.mark}</span>
                 </div>
                 <div className="property__name-wrapper">
                   <h1 className="property__name">
-                    {offer.name}
+                    {element.name}
                   </h1>
                   <button className="property__bookmark-button button" type="button">
                     <svg className="property__bookmark-icon" width="31" height="33">
@@ -103,30 +104,30 @@ class OfferDetailed extends PureComponent {
                 </div>
                 <div className="property__rating rating">
                   <div className="property__stars rating__stars">
-                    <span style={{width: offer.rate + `%`}}></span>
+                    <span style={{width: element.rate + `%`}}></span>
                     <span className="visually-hidden">Rating</span>
                   </div>
-                  <span className="property__rating-value rating__value">{offer.rate}</span>
+                  <span className="property__rating-value rating__value">{element.rate}</span>
                 </div>
                 <ul className="property__features">
                   <li className="property__feature property__feature--entire">
-                    {offer.type}
+                    {element.type}
                   </li>
                   <li className="property__feature property__feature--bedrooms">
-                    {offer.bedrooms} Bedrooms
+                    {element.bedrooms} Bedrooms
                   </li>
                   <li className="property__feature property__feature--adults">
-                  Max {offer.guests} adults
+                  Max {element.guests} adults
                   </li>
                 </ul>
                 <div className="property__price">
-                  <b className="property__price-value">&euro;{offer.price}</b>
+                  <b className="property__price-value">&euro;{element.price}</b>
                   <span className="property__price-text">&nbsp;night</span>
                 </div>
                 <div className="property__inside">
                   <h2 className="property__inside-title">What&apos;s inside</h2>
                   <ul className="property__inside-list">
-                    {offer.devices.map((it, id) => (
+                    {element.devices.map((it, id) => (
                       <li key={it + id} className="property__inside-item">
                         {it}
                       </li>
@@ -141,18 +142,18 @@ class OfferDetailed extends PureComponent {
                     >
                       <img
                         className="property__avatar user__avatar"
-                        src={offer.owner.avatar}
+                        src={element.owner.avatar}
                         width="74"
                         height="74"
                         alt="Host avatar"
                       />
                     </div>
                     <span className="property__user-name">
-                      {offer.owner.username}
+                      {element.owner.username}
                     </span>
                   </div>
                   <div className="property__description">
-                    {offer.description.map((it, id) => (
+                    {element.description.map((it, id) => (
                       <p key={it + id} className="property__text">
                         {it}
                       </p>
